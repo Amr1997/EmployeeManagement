@@ -1,0 +1,82 @@
+/* Basic global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+}
+
+/* Ant Design Layout Fix */
+.ant-layout {
+  min-height: 100vh;
+}
+
+.ant-layout-header {
+  background: #fff;
+  padding: 0 20px;
+}
+
+.ant-layout-content {
+  padding: 16px;
+  background: #fff;
+}
+
+/* Ensure the Sider collapses on smaller screens */
+@media (max-width: 767px) {
+  .ant-layout-sider {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+  }
+
+  .ant-layout-sider-collapsed {
+    width: 80px; /* Smaller width when collapsed */
+  }
+
+  .ant-layout-sider-collapsed .logo {
+    display: none; /* Hide the logo when the Sider is collapsed */
+  }
+
+  .ant-layout {
+    margin-left: 0 !important;
+  }
+
+  .ant-layout-header {
+    padding: 0 10px;
+  }
+
+  .ant-layout-content {
+    margin-left: 80px; /* Space for collapsed sidebar */
+  }
+}
+
+/* Adjust content padding when the screen is smaller */
+@media (max-width: 767px) {
+  .ant-layout-content {
+    padding: 12px;
+  }
+
+  .ant-layout-header h1 {
+    font-size: 18px;
+  }
+}
+
+/* Small screen adjustments for header */
+@media (max-width: 480px) {
+  .ant-layout-header h1 {
+    font-size: 16px;
+  }
+
+  .ant-menu-inline {
+    font-size: 12px;
+  }
+
+  .ant-menu-item {
+    padding: 10px 16px;
+  }
+}
